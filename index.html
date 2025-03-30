@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="id"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLH - Pendidikan Lingkungan Hidup</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+        header {
+            background-color: #FE0002;
+            color: white;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .logo img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 5px;
+        }
+        .logo h1 {
+            margin: 0;
+            font-size: 18px;
+        }
+        nav {
+            width: 100%;
+            background-color: #FE0002;
+            text-align: center;
+            padding: 10px 0;
+        }
+        #menu-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        #nav-menu {
+            display: none;
+            background-color: #FE0002;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        #nav-menu.show {
+            display: block;
+        }
+        #nav-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #nav-menu ul li {
+            padding: 10px;
+        }
+        #nav-menu ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .hero {
+            background-color: #9AFF01;
+            color: #000000;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .btn {
+            background-color: #FD0002;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .social-media a {
+            margin: 0 10px;
+        }
+        footer {
+            background-color: #FE0002;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .vision-mission {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://drive.google.com/file/d/1MzGP4MtNtQFlG-7Xyp2U3zmSBd9swXy9/view?usp=drivesdk alt="Logo PLH Kembara">
+            <h1>PLH KEMBARA SMK HASYIM ASY'ARI BOJONG</h1>
+        </div>
+    </header>
+    <nav>
+        <button id="menu-button">☰</button>
+        <div id="nav-menu">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Profil</a></li>
+                <li><a href="activities.html">Kegiatan</a></li>
+                <li><a href="articles.html">Artikel</a></li>
+                <li><a href="gallery.html">Galeri</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><a href="#vision-mission">Visi & Misi</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="container">
+            <h2>Selamat Datang di Pendidikan Lingkungan Hidup</h2>
+            <p>Bersama kita menjaga kelestarian alam untuk generasi mendatang.</p>
+            <a href="about.html" class="btn">Pelajari Lebih Lanjut</a>
+        </div>
+    </section><section id="vision-mission" class="vision-mission">
+    <h2>Visi</h2>
+    <p>•  Menjadikan manusia yang bertanggung jawab terhadap alam dan lingkungan.</p>
+    <h2>Misi</h2>
+    <ul>
+        <li>Mewujudkan manusia yang peduli terhadap sesama manusia.</li>
+        <li>Menjaga dan melestarikan alam agar tercipta lingkungan yang utuh.</li>
+    </ul>
+</section>
+
+<footer>
+    <p>© 2025 PLH - Semua Hak Dilindungi</p>
+    <div class="social-media">
+        <a href="#"><img src="assets/img/facebook.png" alt="Facebook" width="24" height="24" style="filter: invert(1);"></a>
+        <a href="#"><img src="assets/img/instagram.png" alt="Instagram" width="24" height="24" style="filter: invert(1);"></a>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("menu-button").addEventListener("click", function() {
+        document.getElementById("nav-menu").classList.toggle("show");
+    });
+</script>
+
+</body>
+</html>
