@@ -1,156 +1,369 @@
-<!DOCTYPE html><html lang="id"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PLH - Pendidikan Lingkungan Hidup</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #FFFFFF;
-            color: #000000;
-        }
-        header {
-            background-color: #FE0002;
-            color: white;
-            padding: 15px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .logo img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-bottom: 5px;
-        }
-        .logo h1 {
-            margin: 0;
-            font-size: 18px;
-        }
-        nav {
-            width: 100%;
-            background-color: #FE0002;
-            text-align: center;
-            padding: 10px 0;
-        }
-        #menu-button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-        }
-        #nav-menu {
-            display: none;
-            background-color: #FE0002;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-        #nav-menu.show {
-            display: block;
-        }
-        #nav-menu ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        #nav-menu ul li {
-            padding: 10px;
-        }
-        #nav-menu ul li a {
-            color: white;
-            text-decoration: none;
-            display: block;
-        }
-        .hero {
-            background-color: #9AFF01;
-            color: #000000;
-            text-align: center;
-            padding: 50px 20px;
-        }
-        .btn {
-            background-color: #FD0002;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .social-media a {
-            margin: 0 10px;
-        }
-        footer {
-            background-color: #FE0002;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-        .vision-mission {
-            background-color: white;
-            padding: 20px;
-            margin: 20px auto;
-            width: 80%;
-            max-width: 600px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-    </style>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kegiatan - PLH KEMBARA</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-light: #f0f4f5;
+      --text-light: #333;
+      --bg-dark: #1e1e1e;
+      --text-dark: #f1f1f1;
+      --primary: #2c3e50;
+      --accent: #1abc9c;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: 0.3s;
+    }
+
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      background-color: var(--primary);
+      padding: 20px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav h1 {
+      font-size: 24px;
+    }
+
+    .menu-toggle {
+      background: none;
+      border: 2px solid #fff;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .menu-toggle:hover {
+      background-color: var(--accent);
+      color: #2c3e50;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background-color: var(--primary);
+      border-radius: 10px;
+      overflow: hidden;
+      z-index: 99;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: var(--accent);
+      color: #2c3e50;
+    }
+
+    .show {
+      display: block;
+    }
+
+    .content {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: var(--primary);
+    }
+
+    .activity {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    body.dark .activity {
+      background-color: #2c2c2c;
+    }
+
+    .activity:hover {
+      transform: translateY(-5px);
+    }
+
+    .activity h3 {
+      color: #16a085;
+      margin-bottom: 10px;
+    }
+
+    .activity i {
+      margin-right: 8px;
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @media(min-width: 768px) {
+      .dropdown-content {
+        position: static;
+        display: flex !important;
+        flex-direction: row;
+        background-color: transparent;
+        box-shadow: none;
+      }
+
+      .dropdown-content a {
+        color: white;
+        padding: 0 15px;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+    }
+  <style>
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    max-height: 300px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+
+  .gallery-container.expanded {
+    max-height: 1000px; /* atau sesuai kebutuhan */
+  }
+
+  .gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .see-more-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 16px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .see-more-btn:hover {
+    background-color: #2563eb;
+  }
+
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="https://drive.google.com/file/d/1MzGP4MtNtQFlG-7Xyp2U3zmSBd9swXy9/view?usp=drivesdk alt="Logo PLH Kembara">
-            <h1>PLH KEMBARA SMK HASYIM ASY'ARI BOJONG</h1>
-        </div>
-    </header>
+
+  <header>
     <nav>
-        <button id="menu-button">☰</button>
-        <div id="nav-menu">
-            <ul>
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="about.html">Profil</a></li>
-                <li><a href="activities.html">Kegiatan</a></li>
-                <li><a href="articles.html">Artikel</a></li>
-                <li><a href="gallery.html">Galeri</a></li>
-                <li><a href="contact.html">Kontak</a></li>
-                <li><a href="#vision-mission">Visi & Misi</a></li>
-            </ul>
-        </div>
+      <h1><i class="fas fa-leaf"></i> PLH KEMBARA</h1>
     </nav>
-    <section class="hero">
-        <div class="container">
-            <h2>Selamat Datang di Pendidikan Lingkungan Hidup</h2>
-            <p>Bersama kita menjaga kelestarian alam untuk generasi mendatang.</p>
-            <a href="about.html" class="btn">Pelajari Lebih Lanjut</a>
-        </div>
-    </section><section id="vision-mission" class="vision-mission">
-    <h2>Visi</h2>
-    <p>•  Menjadikan manusia yang bertanggung jawab terhadap alam dan lingkungan.</p>
-    <h2>Misi</h2>
+    <div class="dropdown">
+      <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+      <div class="dropdown-content" id="menuDropdown">
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Profil</a>
+        <a href="activities.html">Kegiatan</a>
+        <a href="articles.html">Artikel</a>
+        <a href="gallery.html">Galeri</a>
+        <a href="contact.html">Kontak</a>
+        <a href="#" onclick="toggleDarkMode()">Dark Mode</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <h2>Galeri Kegiatan</h2>
+    <h2>Training dasar anggota kembara ke IX</h2>
+<div class="gallery-container">
+  <div class="gallery-item">
+    
+  </div>
+  <div class="gallery-item">
+<a href="https://ibb.co.com/3yRBzj4Z"><img src="https://i.ibb.co.com/FbHgVymT/IMG-20250129-WA0032.jpg" alt="IMG-20250129-WA0032" border="0" /></a> 
+  </div>
+  <div class="gallery-item">
+<a href="https://ibb.co.com/39k9c8vL"><img src="https://i.ibb.co.com/DHLHQ6YS/IMG-20250129-WA0027.jpg" alt="IMG-20250129-WA0027" border="0"></a>
+  </div>
+  <div class="gallery-item">
+<a href="https://ibb.co.com/8D2T2dzt"><img src="https://i.ibb.co.com/PZ4349T0/IMG-20250129-WA0018.jpg" alt="IMG-20250129-WA0018" border="0"></a>
+  <div class="gallery-item">
+ <a href="https://ibb.co.com/mrVs0rc4"><img src="https://i.ibb.co.com/XfrBDfCt/IMG-20250129-WA0015-1.jpg" alt="IMG-20250129-WA0015-1" border="0"></a>
+  </div>
+</div>
+
+  <a href="image.html">
+    <button style="margin-top: 10px;">Lihat Selengkapnya...</button>
+  </a>
+</div>
+    </div>
+<h2>Kegiatan PLH KEMBARA</h2>
+
+    <div class="activity">
+      <h3><i class="fas fa-tree"></i> Penanaman Pohon</h3>
+      <p>Menanam pohon untuk menjaga keseimbangan ekosistem dan memperindah lingkungan sekitar.</p>
+    </div>
+
+    <div class="activity">
+      <h3><i class="fas fa-recycle"></i> Daur Ulang</h3>
+      <p>Kegiatan mendaur ulang sampah menjadi produk baru yang berguna dan ramah lingkungan.</p>
+    </div>
+
+    <div class="activity">
+      <h3><i class="fas fa-water"></i> Bersih Sungai</h3>
+      <p>Membersihkan sungai dari sampah plastik dan limbah yang dapat merusak ekosistem air.</p>
+    </div>
+  </div>
+  </p>
+
+
+
+
+
+
+    <!-- Tambahan: Berita & Artikel -->
+    <h2>Berita & Artikel Terbaru</h2>
+
+    <div class="activity">
+      <h3><i class="fas fa-newspaper"></i> Sampah Plastik Menumpuk di Sungai</h3>
+      <p>Tim PLH KEMBARA melakukan observasi lapangan dan menemukan peningkatan volume sampah plastik di sungai sekitar. Langkah penanganan segera direncanakan.</p>
+      <a href="articles1.html" target="_blank" style="color: var(--accent); text-decoration: underline;">Baca Selengkapnya</a>
+    </div>
+
+    <div class="activity">
+      <h3><i class="fas fa-sun"></i> Edukasi Lingkungan di Sekolah</h3>
+      <p>Kegiatan sosialisasi tentang pentingnya menjaga lingkungan hidup telah dilakukan di beberapa sekolah dasar wilayah kota.</p>
+      <a href="#" style="color: var(--accent); text-decoration: underline;">Baca Selengkapnya</a>
+    </div>
+    <!-- Akhir Tambahan -->
+  </div>
+             <section id="perekrutan" style="padding: 50px 20px; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1508780709619-79562169bc64') center/cover no-repeat; color: #fff;">
+  <div style="max-width: 900px; margin: auto; background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px); border-radius: 20px; padding: 30px; animation: fadeInUp 1s ease-out;">
+    <h2 style="text-align: center; color: #00ffcc;">Perekrutan Anggota Muda kembara</h2>
+    <p style="text-align: center; font-size: 18px;">KEMBARA - Komunitas Pecinta Alam</p>
+    <p>Halo Sobat Petualang! KEMBARA membuka perekrutan anggota muda untuk kamu yang siap menjelajahi alam, belajar bertahan hidup, dan bertumbuh bersama alam.</p>
+
+    <h3>Syarat Pendaftaran:</h3>
     <ul>
-        <li>Mewujudkan manusia yang peduli terhadap sesama manusia.</li>
-        <li>Menjaga dan melestarikan alam agar tercipta lingkungan yang utuh.</li>
+      <li>Siswa/i smk hasyri aktif</li>
+      <li>Sehat jasmani dan rohani</li>
+      <li>Siap mengikuti seleksi & pelatihan</li>
+      <li>Berkomitmen & berjiwa petualang</li>
     </ul>
+
+    <h3>Keuntungan Bergabung:</h3>
+    <ul>
+      <li>Pelatihan kepecintaalaman</li>
+      <li>Ekspedisi dan kegiatan luar ruang</li>
+      <li>Belajar navigasi & survival</li>
+      <li>Relasi & pengalaman tak terlupakan</li>
+    </ul>
+
+    <p><strong>Pendaftaran dibuka sampai:</strong> 30 April 2025</p>
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="formulir.html" target="_blank" style="background-color: #00ffcc; color: #000; padding: 12px 25px; border-radius: 10px; text-decoration: none; font-weight: bold;">Daftar Sekarang</a>
+    </div>
+    <p style="margin-top: 20px; font-size: 14px; text-align: center;">Hubungi kami di IG <strong>@kembara.explorer</strong> | WA: <strong>08xxxxxxxxxx</strong></p>
+  </div>
 </section>
 
-<footer>
-    <p>© 2025 PLH - Semua Hak Dilindungi</p>
-    <div class="social-media">
-        <a href="#"><img src="assets/img/facebook.png" alt="Facebook" width="24" height="24" style="filter: invert(1);"></a>
-        <a href="#"><img src="assets/img/instagram.png" alt="Instagram" width="24" height="24" style="filter: invert(1);"></a>
-    </div>
-</footer>
+<style>
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
 
-<script>
-    document.getElementById("menu-button").addEventListener("click", function() {
-        document.getElementById("nav-menu").classList.toggle("show");
+
+  <footer>
+    &copy; 2025 PLH. Hak cipta dilindungi.
+  </footer>
+
+  <!-- Scroll Reveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal().reveal('.activity', {
+      delay: 100,
+      duration: 800,
+      origin: 'bottom',
+      distance: '30px',
+      easing: 'ease-in-out',
+      interval: 200
     });
-</script>
 
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+
+    function toggleMenu() {
+      document.getElementById("menuDropdown").classList.toggle("show");
+    }
+
+    // Optional: Close menu when clicking outside
+    window.onclick = function(event) {
+      if (!event.target.matches('.menu-toggle') && !event.target.closest('.dropdown-content')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
 </body>
 </html>
