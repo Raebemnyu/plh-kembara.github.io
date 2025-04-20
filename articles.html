@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artikel - PLH KEMBARA</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-light: #f0f4f5;
+      --text-light: #333;
+      --bg-dark: #1e1e1e;
+      --text-dark: #f1f1f1;
+      --primary: #2c3e50;
+      --accent: #1abc9c;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: 0.3s;
+    }
+
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      background-color: var(--primary);
+      padding: 20px;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav h1 {
+      font-size: 24px;
+    }
+
+    .menu-toggle {
+      background: none;
+      border: 2px solid #fff;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .menu-toggle:hover {
+      background-color: var(--accent);
+      color: #2c3e50;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background-color: var(--primary);
+      border-radius: 10px;
+      overflow: hidden;
+      z-index: 99;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: var(--accent);
+      color: #2c3e50;
+    }
+
+    .show {
+      display: block;
+    }
+
+    .content {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: var(--primary);
+    }
+
+    .article {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    body.dark .article {
+      background-color: #2c2c2c;
+    }
+
+    .article:hover {
+      transform: translateY(-5px);
+    }
+
+    .article h3 {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .article p {
+      margin-bottom: 10px;
+    }
+
+    .article a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    @media(min-width: 768px) {
+      .dropdown-content {
+        position: static;
+        display: flex !important;
+        flex-direction: row;
+        background-color: transparent;
+        box-shadow: none;
+      }
+
+      .dropdown-content a {
+        color: white;
+        padding: 0 15px;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1><i class="fas fa-leaf"></i> PLH KEMBARA</h1>
+    </nav>
+    <div class="dropdown">
+      <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+      <div class="dropdown-content" id="menuDropdown">
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Profil</a>
+        <a href="activities.html">Kegiatan</a>
+        <a href="articles.html">Artikel</a>
+        <a href="gallery.html">Galeri</a>
+        <a href="contact.html">Kontak</a>
+        <a href="#" onclick="toggleDarkMode()">Dark Mode</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <h2>Artikel & Berita</h2>
+
+    <div class="article">
+      <h3><i class="fas fa-leaf"></i> Kenapa Kita Harus Menanam Pohon?</h3>
+      <p>Menanam pohon bukan hanya memperindah lingkungan, tetapi juga menyelamatkan bumi dari pemanasan global.</p>
+      <a href="#">Baca Selengkapnya</a>
+    </div>
+
+    <div class="article">
+      <h3><i class="fas fa-trash-alt"></i> Bahaya Sampah Plastik Bagi Ekosistem</h3>
+      <p>Sampah plastik dapat mencemari tanah dan air, membahayakan makhluk hidup, termasuk manusia.</p>
+      <a href="#">Baca Selengkapnya</a>
+    </div>
+
+    <div class="article">
+      <h3><i class="fas fa-school"></i> PLH Goes to School</h3>
+      <p>Kegiatan edukatif yang diselenggarakan di sekolah-sekolah untuk menyadarkan generasi muda akan pentingnya lingkungan.</p>
+      <a href="#">Baca Selengkapnya</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 PLH. Hak cipta dilindungi.
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+
+    function toggleMenu() {
+      document.getElementById("menuDropdown").classList.toggle("show");
+    }
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.menu-toggle') && !event.target.closest('.dropdown-content')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
