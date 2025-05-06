@@ -28,7 +28,6 @@
     }
 
     body {
-
       font-family: 'Poppins', sans-serif;
       background-color: var(--bg-light);
       color: var(--text-light);
@@ -162,208 +161,288 @@
         display: none;
       }
     }
-  <style>
-  .gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    max-height: 300px;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-  }
 
-  .gallery-container.expanded {
-    max-height: 1000px; /* atau sesuai kebutuhan */
-  }
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      max-height: 300px;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
 
-  .gallery-item img {
-    width: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-  }
+    .gallery-container.expanded {
+      max-height: 1000px;
+    }
 
-  .see-more-btn {
-    display: block;
-    margin: 10px auto;
-    padding: 8px 16px;
-    background-color: #3b82f6;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+    .gallery-item img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
 
-  .see-more-btn:hover {
-    background-color: #2563eb;
-  }
+    .see-more-btn {
+      display: block;
+      margin: 10px auto;
+      padding: 8px 16px;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
+    .see-more-btn:hover {
+      background-color: #2563eb;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
-
   <header>
     <nav>
-      <h1><i class="fas fa-leaf"></i> PLH KEMBARA</h1>
+      <h1>
+        <i class="fas fa-tree" style="color: #228B22; font-size: 40px; margin-right: 10px;"></i>
+        <span>PLH KEMBARA</span>
+      </h1>
     </nav>
     <div class="dropdown">
       <button class="menu-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
       <div class="dropdown-content" id="menuDropdown">
         <a href="index.html">Beranda</a>
-        <a href="about.html">Profil</a>
-        <a href="activities.html">Kegiatan</a>
-        <a href="articles.html">Artikel</a>
+        
+        
         <a href="gallery.html">Galeri</a>
-        <a href="contact.html">Kontak</a>
+        <a href="contact.html">Kontak admin</a>
         <a href="#" onclick="toggleDarkMode()">Dark Mode</a>
       </div>
     </div>
   </header>
+<section class="intro" style="text-align: center; padding: 20px;">
+  <a href="https://ibb.co.com/nskZsF74">
+    <img src="https://i.ibb.co.com/1f2hfkrB/FB-IMG-1743283440888.jpg" alt="FB-IMG-1743283440888" 
+         style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 10px; border: 0;">
+  </a>
+  
+  
+  <section style="text-align: center;">
+  <p style="max-width: 600px; margin: 0 auto;">
+    PLH KEMBARA (Peduli Lingkungan Hidup Kelompok Manusia Pengembara) adalah salah satu ekstrakurikuler yang bernaung di SMK Hasyim Asy'ari Bojong 
+  </p>
+  <a href="about.html" style="text-decoration: none; color: white; background-color: #4CAF50; padding: 10px 20px; border-radius: 5px; display: inline-block; margin-top: 20px;">
+    Read More
+  </a>
+</section>
+  <h2 style="text-align: center;">Galeri Kegiatan</h2>
+<h3 style="text-align: center;">Training Dasar Anggota Kembara ke IX</h3>
 
-  <div class="content">
-    <h2>Galeri Kegiatan</h2>
-    <h2>Training dasar anggota kembara ke IX</h2>
-<div class="gallery-container">
-  <div class="gallery-item">
-    
+<div class="slider-container" id="sliderContainer">
+  <div class="slider" id="slider">
+    <img src="https://i.ibb.co.com/BHbpnGrN/IMG-20250129-WA0032.jpg" alt="1">
+    <img src="https://i.ibb.co.com/DHLHQ6YS/IMG-20250129-WA0027.jpg" alt="2">
+    <img src="https://i.ibb.co.com/PZ4349T0/IMG-20250129-WA0018.jpg" alt="3">
+    <img src="https://i.ibb.co.com/XfrBDfCt/IMG-20250129-WA0015-1.jpg" alt="4">
   </div>
-  <div class="gallery-item">
-<a href="https://ibb.co.com/3yRBzj4Z"><img src="https://i.ibb.co.com/FbHgVymT/IMG-20250129-WA0032.jpg" alt="IMG-20250129-WA0032" border="0" /></a> 
-  </div>
-  <div class="gallery-item">
-<a href="https://ibb.co.com/39k9c8vL"><img src="https://i.ibb.co.com/DHLHQ6YS/IMG-20250129-WA0027.jpg" alt="IMG-20250129-WA0027" border="0"></a>
-  </div>
-  <div class="gallery-item">
-<a href="https://ibb.co.com/8D2T2dzt"><img src="https://i.ibb.co.com/PZ4349T0/IMG-20250129-WA0018.jpg" alt="IMG-20250129-WA0018" border="0"></a>
-  <div class="gallery-item">
- <a href="https://ibb.co.com/mrVs0rc4"><img src="https://i.ibb.co.com/XfrBDfCt/IMG-20250129-WA0015-1.jpg" alt="IMG-20250129-WA0015-1" border="0"></a>
-  </div>
+  <div class="dots" id="dots"></div>
 </div>
+
+<style>
+.slider-container {
+  position: relative;
+  max-width: 700px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  touch-action: pan-y;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.slider img {
+  min-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+}
+
+/* Dots */
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dots .active {
+  background-color: #4CAF50;
+}
+</style>
+
+<script>
+const slider = document.getElementById('slider');
+const dotsContainer = document.getElementById('dots');
+let currentSlide = 0;
+let startX = 0;
+let isDragging = false;
+let autoSlideTimer;
+
+const totalSlides = slider.children.length;
+
+// Buat dot indikator
+for (let i = 0; i < totalSlides; i++) {
+  const dot = document.createElement('span');
+  dot.addEventListener('click', () => {
+    currentSlide = i;
+    updateSlide();
+    resetAutoSlide();
+  });
+  dotsContainer.appendChild(dot);
+}
+
+const dots = dotsContainer.children;
+
+function updateDots() {
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove('active');
+  }
+  dots[currentSlide].classList.add('active');
+}
+
+function updateSlide() {
+  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+  updateDots();
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  updateSlide();
+}
+
+function startAutoSlide() {
+  autoSlideTimer = setInterval(nextSlide, 5000);
+}
+
+function resetAutoSlide() {
+  clearInterval(autoSlideTimer);
+  startAutoSlide();
+}
+
+// Swipe Gesture
+slider.addEventListener('touchstart', (e) => {
+  startX = e.touches[0].clientX;
+  isDragging = true;
+  resetAutoSlide();
+});
+
+slider.addEventListener('touchmove', (e) => {
+  if (!isDragging) return;
+  const currentX = e.touches[0].clientX;
+  const diff = startX - currentX;
+
+  if (Math.abs(diff) > 50) {
+    if (diff > 0) {
+      currentSlide = (currentSlide + 1) % totalSlides;
+    } else {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    }
+    updateSlide();
+    isDragging = false;
+  }
+});
+
+slider.addEventListener('touchend', () => {
+  isDragging = false;
+});
+
+updateSlide(); // Init posisi pertama
+startAutoSlide(); // Start otomatis
+</script>
 
   <a href="image.html">
     <button style="margin-top: 10px;">Lihat Selengkapnya...</button>
   </a>
 </div>
-    </div>
-<h2>Kegiatan PLH KEMBARA</h2>
 
-    <div class="activity">
-      <h3><i class="fas fa-tree"></i> Penanaman Pohon</h3>
-      <p>Menanam pohon untuk menjaga keseimbangan ekosistem dan memperindah lingkungan sekitar.</p>
-    </div>
-
-    <div class="activity">
-      <h3><i class="fas fa-recycle"></i> Daur Ulang</h3>
-      <p>Kegiatan mendaur ulang sampah menjadi produk baru yang berguna dan ramah lingkungan.</p>
-    </div>
-
-    <div class="activity">
-      <h3><i class="fas fa-water"></i> Bersih Sungai</h3>
-      <p>Membersihkan sungai dari sampah plastik dan limbah yang dapat merusak ekosistem air.</p>
-    </div>
+  <h2>Berita & Artikel Terbaru</h2>
+  <div class="activity">
+    <h3><i class="fa fa-trash-alt"></i> PLH KEMBARA ikut serta dalam hari Peduli Sampah Nasional 2025</h3>
+    <p>Pada peringatan Hari Peduli Sampah Nasional 2025, tim PLH KEMBARA berpartisipasi dalam aksi bersih-bersih lingkungan bersama komunitas lokal dan sekolah lain untuk meningkatkan kesadaran akan pentingnya pengelolaan sampah.</p>
+    <a href="articles1.html" style="color: var(--accent); text-decoration: underline;">Baca Selengkapnya</a>
   </div>
-  </p>
 
-
-
-
-
-
-    <!-- Tambahan: Berita & Artikel -->
-    <h2>Berita & Artikel Terbaru</h2>
-
-    <div class="activity">
-      <h3><i class="fas fa-newspaper"></i> Sampah Plastik Menumpuk di Sungai</h3>
-      <p>Tim PLH KEMBARA melakukan observasi lapangan dan menemukan peningkatan volume sampah plastik di sungai sekitar. Langkah penanganan segera direncanakan.</p>
-      <a href="articles1.html" target="_blank" style="color: var(--accent); text-decoration: underline;">Baca Selengkapnya</a>
-    </div>
-
-    <div class="activity">
-      <h3><i class="fas fa-sun"></i> Edukasi Lingkungan di Sekolah</h3>
-      <p>Kegiatan sosialisasi tentang pentingnya menjaga lingkungan hidup telah dilakukan di beberapa sekolah dasar wilayah kota.</p>
-      <a href="#" style="color: var(--accent); text-decoration: underline;">Baca Selengkapnya</a>
-    </div>
-    <!-- Akhir Tambahan -->
+  <div class="perekrutan" style="padding: 60px 20px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.ibb.co/4Z9bwrv/FB-IMG-1743283440888.jpg'); background-size: cover; background-position: center; color: white; text-align: center;">
+  <h2>Bergabunglah Bersama Kami</h2>
+  <p>Ingin menjadi bagian dari PLH KEMBARA? Ayo daftar dan ikut berkontribusi menjaga lingkungan!</p>
+  <a href="formulir.html" style="display: inline-block; padding: 10px 20px; background-color: #1abc9c; color: white; text-decoration: none; border-radius: 5px; margin-top: 15px;">Daftar Sekarang</a>
   </div>
-             <section id="perekrutan" style="padding: 50px 20px; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1508780709619-79562169bc64') center/cover no-repeat; color: #fff;">
-  <div style="max-width: 900px; margin: auto; background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px); border-radius: 20px; padding: 30px; animation: fadeInUp 1s ease-out;">
-    <h2 style="text-align: center; color: #00ffcc;">Perekrutan Anggota Muda kembara</h2>
-    <p style="text-align: center; font-size: 18px;">KEMBARA - Komunitas Pecinta Alam</p>
-    <p>Halo Sobat Petualang! KEMBARA membuka perekrutan anggota muda untuk kamu yang siap menjelajahi alam, belajar bertahan hidup, dan bertumbuh bersama alam.</p>
 
-    <h3>Syarat Pendaftaran:</h3>
-    <ul>
-      <li>Siswa/i smk hasyri aktif</li>
-      <li>Sehat jasmani dan rohani</li>
-      <li>Siap mengikuti seleksi & pelatihan</li>
-      <li>Berkomitmen & berjiwa petualang</li>
-    </ul>
-
-    <h3>Keuntungan Bergabung:</h3>
-    <ul>
-      <li>Pelatihan kepecintaalaman</li>
-      <li>Ekspedisi dan kegiatan luar ruang</li>
-      <li>Belajar navigasi & survival</li>
-      <li>Relasi & pengalaman tak terlupakan</li>
-    </ul>
-
-    <p><strong>Pendaftaran dibuka sampai:</strong> 30 April 2025</p>
-    <div style="text-align: center; margin-top: 20px;">
-      <a href="formulir.html" target="_blank" style="background-color: #00ffcc; color: #000; padding: 12px 25px; border-radius: 10px; text-decoration: none; font-weight: bold;">Daftar Sekarang</a>
-    </div>
-    <p style="margin-top: 20px; font-size: 14px; text-align: center;">Hubungi kami di IG <strong>@kembara.explorer</strong> | WA: <strong>08xxxxxxxxxx</strong></p>
+<!-- FOOTER DIPISAH DARI SECTION -->
+<footer style="background-color: #222; color: white; padding: 20px 0; text-align: center;">
+  <div style="margin-bottom: 10px;">
+    <a href="https://www.instagram.com/plh.kembara" target="_blank" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" style="width: 24px; vertical-align: middle;">
+    </a>
+    <a href="plhkembara@gmail.com" style="margin: 0 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" style="width: 24px; vertical-align: middle;">
+    </a>
   </div>
-</section>
-
-<style>
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>
+  <div>
+    &copy; 2025 KEMBARA – Hak cipta dilindungi.
+  </div>
+</footer>
 
 
-  <footer>
-    &copy; 2025 PLH. Hak cipta dilindungi.
-  </footer>
-
-  <!-- Scroll Reveal -->
-  <script src="https://unpkg.com/scrollreveal"></script>
   <script>
-    ScrollReveal().reveal('.activity', {
-      delay: 100,
-      duration: 800,
-      origin: 'bottom',
-      distance: '30px',
-      easing: 'ease-in-out',
-      interval: 200
-    });
+    function toggleMenu() {
+      const menu = document.getElementById("menuDropdown");
+      menu.classList.toggle("show");
+    }
 
     function toggleDarkMode() {
-      document.body.classList.toggle('dark');
+      document.body.classList.toggle("dark");
     }
 
-    function toggleMenu() {
-      document.getElementById("menuDropdown").classList.toggle("show");
-    }
-
-    // Optional: Close menu when clicking outside
     window.onclick = function(event) {
-      if (!event.target.matches('.menu-toggle') && !event.target.closest('.dropdown-content')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        for (var i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
+      const menu = document.getElementById("menuDropdown");
+      if (!event.target.matches('.menu-toggle') && !event.target.closest('.menu-toggle')) {
+        if (menu.classList.contains('show')) {
+          menu.classList.remove('show');
         }
       }
     }
   </script>
 </body>
-</html>
+    </html>
