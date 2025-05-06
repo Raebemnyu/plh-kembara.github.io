@@ -1,186 +1,87 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tentang Kami - PLH KEMBARA</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> about PLH KEMBARA</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <style>
-    :root {
-      --bg-light: #f0f4f5;
-      --text-light: #333;
-      --bg-dark: #1e1e1e;
-      --text-dark: #f1f1f1;
-      --primary: #fe0002;
-      --accent: #1abc9c;
-    }
-
-    * {
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-light);
-      transition: 0.3s;
-    }
-
-    body.dark {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
-    }
-
     header {
-      background-color: var(--primary);
-      color: #fff;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
     }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo img {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: var(--accent);
-    }
-
-    .toggle-btn {
-      background: none;
-      border: 2px solid #fff;
-      color: #fff;
-      padding: 5px 10px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .toggle-btn:hover {
-      background-color: var(--accent);
-      color: #2c3e50;
-    }
-
     .content {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
+      padding: 20px;
+      background-color: white;
+      margin: 20px;
+      border-radius: 8px;
     }
-
-    .content h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: var(--primary);
+    h2 {
+      color: #4CAF50;
     }
-
-    .content p, .content li {
-      margin-bottom: 15px;
-      line-height: 1.7;
+    .section {
+      margin-bottom: 20px;
     }
-
-    .content h3, .content h4 {
-      margin-top: 25px;
-      color: var(--accent);
+    .button-back {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
     }
-
-    footer {
-      background-color: var(--primary);
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-        align-items: flex-start;
-      }
+    .button-back:hover {
+      background-color: #45a049;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="https://drive.google.com/uc?export=view&id=18w2QRbTe42R_Bkxvl_s2SGDPozqV7uOk" alt="Foto Kegiatan PLH" style="max-width: 100%; border-radius: 10px; margin-bottom: 20px;">
 
-      <h1>PLH KEMBARA</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="about.html">Profil</a></li>
-        <li><a href="activities.html">Kegiatan</a></li>
-        <li><a href="articles.html">Artikel</a></li>
-        <li><a href="gallery.html">Galeri</a></li>
-        <li><a href="contact.html">Kontak</a></li>
-      </ul>
-    </nav>
-    <button class="toggle-btn" onclick="toggleDarkMode()">Dark Mode</button>
+  <header>
+    <h1>Tentang PLH KEMBARA</h1>
   </header>
 
-  <section class="content">
-    <h2>Tentang PLH KEMBARA</h2>
-    <p><strong>PLH KEMBARA</strong> (Pecinta Lingkungan Hidup Kelompok Manusia Pengembara) adalah ekstrakurikuler di SMK Hasyim Asy'ari Bojong yang berdiri sejak 10 September 2014, dibina oleh Pak Syukron Ma'mun dan dirintis oleh tujuh siswa putra dan dua putri.</p>
+  <div class="content">
+    <div class="section">
+      <h2>Sejarah PLH KEMBARA</h2>
+      <p>
+        PLH KEMBARA (Pecinta Lingkungan Hidup Kelompok Manusia Pengembara) didirikan pada tanggal 10 September 2014 di SMK Hasyim Asy'ari Bojong. Organisasi ini terbentuk untuk menumbuhkan kesadaran akan pentingnya menjaga kelestarian alam dan lingkungan hidup, serta memberikan wadah bagi siswa untuk berpartisipasi dalam kegiatan alam terbuka dan sosial.
+        Sejak didirikan, PLH KEMBARA telah melaksanakan berbagai kegiatan seperti penanaman pohon, aksi sosial, dan edukasi lingkungan kepada masyarakat sekitar.
+      </p>
+    </div>
 
-    <p>Organisasi ini berfokus pada peningkatan kesadaran lingkungan melalui kegiatan positif seperti penanaman pohon, bersih-bersih lingkungan, dan edukasi pengurangan sampah plastik.</p>
+    <div class="section">
+      <h2>Pembina</h2>
+      <p>
+        PLH KEMBARA dipimpin oleh seorang pembina yang berkompeten di bidangnya, yaitu <strong>PA Syukron Ma'mun</strong>. Pembina ini bertanggung jawab dalam memberikan arahan dan bimbingan kepada anggota PLH KEMBARA untuk menjalankan visi dan misi organisasi dengan baik. Selain itu, pembina juga berperan penting dalam merancang program kerja yang bermanfaat bagi perkembangan organisasi dan pelestarian lingkungan.
+      </p>
+    </div>
 
-    <p>Selain kegiatan rutin, PLH KEMBARA juga aktif bekerja sama dengan organisasi lingkungan lainnya di tingkat lokal dan nasional, serta menyelenggarakan seminar, pelatihan, dan kampanye peduli lingkungan.</p>
+    <div class="section">
+      <h2>Visi dan Misi</h2>
+      <h3>Visi</h3>
+      <p>
+        Menjadikan manusia yang bertanggung jawab terhadap alam dan lingkungan.
+      </p>
 
-    <h3>Visi</h3>
-    <ul>
-      <li>Menjadikan manusia yang bertanggung jawab terhadap alam dan lingkungan.</li>
-    </ul>
+      <h3>Misi</h3>
+      <ul>
+        <li>Meletakkan dasar bagi manusia yang peduli terhadap sesama manusia.</li>
+        <li>Menjaga dan melestarikan alam agar tercipta lingkungan yang utuh.</li>
+      </ul>
+    </div>
 
-    <h3>Misi</h3>
-    <ul>
-      <li>Mewujudkan manusia yang peduli terhadap sesama manusia.</li>
-      <li>Menjaga dan melestarikan alam agar tercipta lingkungan yang utuh.</li>
-    </ul>
-  </section>
+    <a href="index.html" class="button-back">Kembali ke Beranda</a>
+  </div>
 
-  <footer>
-    &copy; 2025 PLH KEMBARA - Semua Hak Dilindungi
-  </footer>
-
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
-    }
-  </script>
 </body>
 </html>
