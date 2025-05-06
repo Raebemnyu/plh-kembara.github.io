@@ -1,97 +1,83 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Formulir Pendaftaran KEMBARA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1508780709619-79562169bc64') center/cover no-repeat;
       color: #fff;
+      padding: 40px 20px;
     }
     .container {
-      max-width: 600px;
-      margin: 80px auto;
-      background: rgba(255,255,255,0.05);
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-      backdrop-filter: blur(6px);
+      max-width: 850px;
+      margin: auto;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
     }
     h2 {
       text-align: center;
-      margin-bottom: 30px;
-      color: #00ffcc;
+      color: #00ffc8;
+      font-size: 28px;
+      margin-bottom: 10px;
     }
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
+    p {
+      font-size: 17px;
+      line-height: 1.6;
     }
-    input, textarea, select {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
+    ul {
+      margin-left: 20px;
+      margin-bottom: 25px;
     }
-    input[type="submit"] {
-      background-color: #00ffcc;
+    a.button {
+      display: inline-block;
+      background-color: #00ffc8;
       color: #000;
+      padding: 14px 30px;
+      border-radius: 10px;
+      text-decoration: none;
       font-weight: bold;
-      cursor: pointer;
+      font-size: 17px;
+      text-align: center;
       transition: background 0.3s ease;
     }
-    input[type="submit"]:hover {
-      background-color: #00ccaa;
+    a.button:hover {
+      background-color: #00ddb3;
     }
-    .back {
-      display: block;
+    .btn-center {
       text-align: center;
-      margin-top: 20px;
-      color: #ccc;
-      text-decoration: none;
-    }
-    .back:hover {
-      color: #00ffcc;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
+
   <div class="container">
-    <h2>Formulir Pendaftaran KEMBARA</h2>
-<form action="#" method="post">
-  <label for="nama">Nama Lengkap:</label>
-  <input type="text" id="nama" name="nama" required>
+    <h2>Pendaftaran Anggota Muda KEMBARA</h2>
+    <p>Mari bergabung menjadi bagian dari keluarga besar KEMBARA SMK Hasyim Asy'ari!</p>
 
-  <label for="kelas">Kelas:</label>
-  <input type="text" id="kelas" name="kelas" required>
+    <h3>Syarat Pendaftaran:</h3>
+    <ul>
+      <li>Siswa/i aktif SMK Hasyim Asy'ari</li>
+      <li>Sehat jasmani dan rohani</li>
+      <li>Suka tantangan dan kegiatan alam</li>
+      <li>Mendapat izin dari orang tua</li>
+    </ul>
 
-  <label for="nohp">Nomor WhatsApp:</label>
-  <input type="tel" id="nohp" name="nohp" required>
+    
 
-  <label for="alasan">Alasan Bergabung dengan KEMBARA:</label>
-  <textarea id="alasan" name="alasan" rows="4" required></textarea>
-
-  <label for="pengalaman">Apakah kamu punya pengalaman kegiatan alam bebas?</label>
-  <select id="pengalaman" name="pengalaman" required>
-    <option value="">-- Pilih --</option>
-    <option value="ya">Ya, pernah</option>
-    <option value="tidak">Belum pernah</option>
-  </select>
-  
-  <label for="penyakit">Apakah kamu memiliki riwayat penyakit?</label>
-  <textarea id="penyakit" name="penyakit" rows="4" placeholder="Contoh: Asma, Diabetes, dll." required></textarea>
-  
-
-      <input type="submit" value="Kirim Pendaftaran">
-    </form>
-    <a class="back" href="index.html">← Kembali ke Beranda</a>
+    <div class="btn-center">
+      <a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSc7GMdK3f5DDCBspy8XZdyOaxYkfBrSEgXBoWMi4elfBIlQdg/viewform?usp=header" target="_blank">
+        Daftar Sekarang
+      </a>
+    </div>
   </div>
+
 </body>
 </html>
